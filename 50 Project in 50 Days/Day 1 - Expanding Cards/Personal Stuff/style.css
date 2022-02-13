@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Gideon Roman', cursive;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Gideon Roman', Georgia;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    background-color: tomato;
+    color: white;
+    padding: 24px;
+}
+
+header h1 {
+    font-size: 56px;
+}
+
+.panels {
+    display: flex;
+    padding: 3em 2em;
+    column-gap: 20px;
+}
+
+.panel-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* object-fit: cover; */
+    height: 70vh;
+    flex: 0.5;
+    cursor: pointer;
+    padding: 10px;
+    transition: flex 0.7s ease-in-out;
+}
+
+.panel-item h3 {
+    opacity: 0;
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.panel-item.active {
+    flex: 5;
+}
+
+.panel-item.active h3 {
+    opacity: 1;
+    transition: opacity 0.7s ease-in-out;
+}
+
+/* Smaller Screen Size */
+
+@media (max-width:768px) {
+    .panel-item:nth-of-type(4), .panel-item:nth-of-type(5) {
+        display: none;
+    }
+
+    .panels {
+        display: flex;
+        padding: 24px 16px;
+    }
+}
