@@ -73,4 +73,12 @@ header h1 {
         display: flex;
         padding: 24px 16px;
     }
+
+    .panel-item h3 {
+        font-size: 1.6em;
+    }
+
+    header h1{
+        font-size: 32px;
+    }
 }
